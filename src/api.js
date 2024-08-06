@@ -8,6 +8,26 @@ const getArticles = () => {
     })
 }
 
+const getArticlesById = (article_id) =>{
+    return axios
+    .get(`https://be-nc-news-lo1x.onrender.com/api/articles/${article_id}`)
+    .then((response)=>{
+        return response.data
+    })
+} 
+
+const getComments = (article_id) => {
+    return axios
+    .get(`https://be-nc-news-lo1x.onrender.com/api/articles/${article_id}/comments`)
+    .then((response)=>{
+        return response.data
+    })
+}
+
+
+
 export{
-    getArticles
+    getArticles,
+    getArticlesById,
+    getComments
 }
