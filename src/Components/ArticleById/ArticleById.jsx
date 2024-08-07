@@ -38,13 +38,11 @@ export default function ArticleById() {
           <p className="article-votes-comments">Category: {article.topic}</p>
           <p className="article-votes-comments">Votes : {article.votes}</p>
           <p>{article.body}</p>
-          <CommentLists article_id={article_id} />
-
+          <div className="comment-container">
+            <CommentLists article_id={article_id} />
+          </div>
         </div>
       </article>
-      <div className="comment-container">
-        {/* <CommentLists article_id={article_id} /> */}
-      </div>
     </div>
   );
 }
