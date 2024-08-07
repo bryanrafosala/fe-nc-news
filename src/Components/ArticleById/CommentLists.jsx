@@ -1,13 +1,30 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react";
+import { getComments } from "../../api";
+import CommentCard from "./CommentCard";
 
+export default function CommentLists({ article_id }) {
+  const [comments, setComments] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-export default function CommentLists ({}){
-    const [comments, setComments] = useState([])
+  useEffect(() => {
+    getComments(article_id).then((commentData) => {
+      setComments(commentData.comments);
+      setIsLoading(false);
+    });
+  }, [article_id]);
 
-    useEffect(article_id).then((CommentData)=>{
-        setComments(CommentData.comments)
-        console.log(comments)
-    })
-
-
+  return isLoading ? (
+    <div className="loader-container">
+      <div className="loader"></div>
+    </div>
+  ) : (
+    <div className="comment-container">
+      <ul className="comment-lists">
+        {comments.map((comment) => (
+            <CommentCard key={comment.comment_id} comment={comment} setComments={setComments}/>
+        ))}
+      </ul>
+    </div>
+  );
 }
+
