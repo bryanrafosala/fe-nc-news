@@ -12,7 +12,6 @@ function App() {
       <Routes>
         <Route path='/' element={ <ArticlesLists/>}/>
         <Route path='/articles/:article_id' element={ <ArticleById/>}/>
-
       </Routes>
      
     </>

@@ -2,6 +2,7 @@ import { getArticlesById } from "../../api";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import "../CSS/ArticleById.css";
+import CommentLists from "./CommentLists";
 
 export default function ArticleById() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,7 +12,7 @@ export default function ArticleById() {
   useEffect(() => {
     getArticlesById(article_id).then((ArticleData) => {
       setArticle(ArticleData.article);
-      setIsLoading(false)
+      setIsLoading(false);
     });
   }, [article_id]);
 
@@ -22,20 +23,25 @@ export default function ArticleById() {
   ) : (
     <div className="articleById-div-container">
       <article>
-      <h2 className="article-title">{article.title}</h2>
+        <div className="articlebyid-container">
+          <h2 className="article-title">{article.title}</h2>
 
-      <p className="article-date">
-          {new Date(article.created_at).toLocaleString()}
-        </p>
-        <p className="article-author">Author: {article.author}</p>
-        <img
-          src={article.article_img_url}
-          alt={article.title}
-          className="article-img"
-        />
-        <p className="article-votes-comments">Category: {article.topic}</p>
-        <p className="article-votes-comments">Votes : {article.votes}</p>
-        <p>{article.body}</p>
+          <p className="article-date">
+            {new Date(article.created_at).toLocaleString()}
+          </p>
+          <p className="article-author">Author: {article.author}</p>
+          <img
+            src={article.article_img_url}
+            alt={article.title}
+            className="article-img"
+          />
+          <p className="article-votes-comments">Category: {article.topic}</p>
+          <p className="article-votes-comments">Votes : {article.votes}</p>
+          <p>{article.body}</p>
+          <div className="comment-container">
+            <CommentLists article_id={article_id} />
+          </div>
+        </div>
       </article>
     </div>
   );
