@@ -24,10 +24,22 @@ const getComments = (article_id) => {
     })
 }
 
+const voteArticleById = (article_id, vote) => {
+    return axios
+        .patch(`https://be-nc-news-lo1x.onrender.com/api/articles/${article_id}`, vote)
+        .then((response) => {
+            return response.data;
+        });
+};
+
+
+
+
 
 
 export{
     getArticles,
     getArticlesById,
-    getComments
+    getComments,
+    voteArticleById
 }

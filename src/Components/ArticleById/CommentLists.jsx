@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getComments } from "../../api";
 import CommentCard from "./CommentCard";
+import "../CSS/CommentCard.css";
 
 export default function CommentLists({ article_id }) {
   const [comments, setComments] = useState([]);
@@ -19,11 +20,9 @@ export default function CommentLists({ article_id }) {
     </div>
   ) : (
     <div className="comment-container">
-      <ul className="comment-lists">
         {comments.map((comment) => (
             <CommentCard key={comment.comment_id} comment={comment} setComments={setComments}/>
         ))}
-      </ul>
     </div>
   );
 }
