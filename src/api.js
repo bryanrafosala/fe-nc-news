@@ -34,11 +34,15 @@ const voteArticleById = (article_id, vote) => {
 
 const postCommentApi = (comment, article_id) => {
     return axios.post(
-      `https://be-nc-news-lo1x.onrender.comapi/articles/${article_id}/comments`,
+      `https://be-nc-news-lo1x.onrender.com/api/articles/${article_id}/comments`,
       comment
     )
   };
-
+  const deleteCommentApi = (comment_id) => {
+    return axios.delete(
+        `https://be-nc-news-lo1x.onrender.com/api/comments/${comment_id}`
+    );
+};
 
 
 export{
@@ -46,5 +50,6 @@ export{
     getArticlesById,
     getComments,
     voteArticleById,
-    postCommentApi
+    postCommentApi,
+    deleteCommentApi
 }
