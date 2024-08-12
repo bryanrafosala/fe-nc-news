@@ -28,6 +28,7 @@ export default function PostCommentForm({ setComments, username }) {
 
     postCommentApi(commentInfo, article_id)
       .then(({ data }) => {
+        console.log(data)
         setIsLoading(false);
         setCommentInput("");
         setComments((existingComments) => [

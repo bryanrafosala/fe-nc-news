@@ -42,13 +42,16 @@ export default function CommentLists({ article_id }) {
         setComments={setComments}
         username={username}
       />
-      {comments.map((comment) => (
-        <CommentCard
-          key={comment.comment_id}
-          comment={comment}
-          setComments={setComments}
-        />
-      ))}
-    </div>
+      {comments.map((comment) => 
+        comment && (
+          <CommentCard
+            key={comment.comment_id} 
+            comment={comment}
+            setComments={setComments}
+            username={username} 
+          />
+        )
+      )}
+    </div>  
   );
 }
