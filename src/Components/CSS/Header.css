@@ -44,3 +44,45 @@ header {
 .header-nav button:hover {
     color: #6c6c6c;
 }
+
+header {
+    background-color: #ffffff; /* Light background color */
+    padding: 10px 20px; /* Padding around the header */
+    border-bottom: 1px solid #ddd; /* Subtle border at the bottom */
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between; /* Space out the left and right sections */
+    align-items: center; /* Center items vertically */
+}
+
+.header-left h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Set font size */
+    color: #333; /* Dark color for text */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.header-left a {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit color from parent */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 24px; /* Size for icon */
+    color: #333; /* Icon color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.header-right button:hover {
+    color: #007bff; /* Change color on hover */
+}

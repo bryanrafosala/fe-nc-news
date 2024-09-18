@@ -1,0 +1,38 @@
+/* Vote.css */
+
+.vote-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align items to the right */
+  margin-right: 20px; /* Adjust this value to move items left from the very edge */
+}
+
+.vote-button {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  padding: 5px; /* Adjust as needed */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 15px; /* Adjust as needed */
+  margin-right: 8px; /* Space between button and vote count */
+}
+
+.vote-button.voted {
+  background-color: #e0e0e0; /* Grey when clicked */
+  border-color: #ccc; /* Slightly darker border */
+}
+
+.vote-icon {
+  font-size: 15px; /* Adjust as needed */
+  color: #333;
+}
+
+.vote-count {
+  font-size: 15px; /* Adjust as needed */
+  color: #333;
+  margin: 0; /* Remove margin if needed */
+}

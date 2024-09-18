@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function DeleteComment({
   comment_id,
-  setComment,
+  setComments,
   username,
   authors,
 }) {
@@ -12,7 +12,7 @@ export default function DeleteComment({
   function handleDeleteComment() {
     deleteCommentApi(comment_id)
       .then(() => {
-        setComment((current) => {
+        setComments((current) => {
           const updatedComments = current.filter((comment) => {
             return comment.comment_id !== comment_id;
           });

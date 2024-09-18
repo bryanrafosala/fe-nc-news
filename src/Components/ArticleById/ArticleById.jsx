@@ -54,8 +54,8 @@ export default function ArticleById() {
             alt={article.title}
             className="article-img"
           />
-          <p className="article-votes-comments">Category: {article.topic}</p>
           <VoteArticle votes={votes} hasVoted={hasVoted} upVote={upVote} />
+          <p className="article-votes-comments">Category: {article.topic}</p>
           <p>{article.body}</p>
           <div className="comment-container">
             <CommentLists article_id={article_id} />

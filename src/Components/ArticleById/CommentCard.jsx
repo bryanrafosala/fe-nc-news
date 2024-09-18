@@ -12,7 +12,7 @@ export default function CommentCard({ comment, setComments, username }) {
           
           <DeleteComment
             comment_id={comment.comment_id}
-            setComment={setComments}
+            setComments={setComments}
             username={username}
             authors={authors} 
           />

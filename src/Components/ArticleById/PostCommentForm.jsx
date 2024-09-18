@@ -34,7 +34,9 @@ export default function PostCommentForm({ setComments, username }) {
         setComments((existingComments) => [
           data.comment,
           ...existingComments,
-        ]);
+        ])    
+        window.location.reload();
+
       })
       .catch(() => {
         setIsLoading(false);

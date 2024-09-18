@@ -1,7 +1,8 @@
 .article-card {
     border: 1px solid #ddd;
     overflow: hidden;
-    margin: 20px;
+    margin: 20px auto; /* Center cards horizontally */
+    max-width: 400px; /* Adjust max-width as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -11,8 +12,8 @@
 
 .article-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; /* Allow cards to wrap if needed */
+    justify-content: center; /* Center cards horizontally */
     padding: 20px;
 }
 
@@ -59,4 +60,17 @@
 
 .article-date {
     color: #999;
+}
+
+.article-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox to center the cards */
+    flex-wrap: wrap; /* Allow cards to wrap if needed */
+    justify-content: center; /* Center the cards horizontally */
+}
+
+.article-list li {
+    margin: 20px; /* Space between cards */
 }
