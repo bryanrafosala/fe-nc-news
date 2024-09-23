@@ -6,6 +6,8 @@ The project is built using **React**, styled with **Vanilla CSS**, and hosted on
 
 Details of the back-end can be found on [GitHub](https://github.com/bryanrafosala/be-nc-news).
 
+![WhatsApp GIF 2024-09-23 at 15 14 34](https://github.com/user-attachments/assets/58d06e6f-94b4-4175-9557-840f944eb92a)
+
 ## Running Locally
 
 To run this project locally:
@@ -36,7 +38,6 @@ Before development, I created a wireframe and component tree to plan out the str
 
 ![ReactState](./src/Plan/PLAN.png)
 
-![WhatsApp GIF 2024-09-23 at 15 14 34](https://github.com/user-attachments/assets/58d06e6f-94b4-4175-9557-840f944eb92a)
 
 
 
