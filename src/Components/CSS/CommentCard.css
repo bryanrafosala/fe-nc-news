@@ -1,4 +1,4 @@
-.comment-card {
+/* .comment-card {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -13,4 +13,33 @@
   .comment-card p {
     margin: 5px 0;
     color: #666;
-  }
+  } */
+
+  .comment-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.comment-card h5 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.comment-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.comment-card .votes {
+    font-weight: bold;
+}
+
+.comment-card .timestamp {
+    font-style: italic;
+    color: #888;
+}

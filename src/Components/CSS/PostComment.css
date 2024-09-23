@@ -1,0 +1,28 @@
+.comment-container {
+    display: flex;
+    flex-direction: column; 
+}
+
+.comment-input {
+    width: 98%;
+    height: 100px;
+    border: solid #ccc;
+    font-size: 14px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.comment-button {
+    padding: 10px;
+    background-color: #2b2b2b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin-bottom: 5px; */
+    align-self: flex-end;
+}
+
+.comment-button:disabled {
+    background-color: #ccc;
+}

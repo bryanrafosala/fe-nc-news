@@ -38,11 +38,23 @@ const postCommentApi = (comment, article_id) => {
       comment
     )
   };
-  const deleteCommentApi = (comment_id) => {
+
+const deleteCommentApi = (comment_id) => {
     return axios.delete(
         `https://be-nc-news-lo1x.onrender.com/api/comments/${comment_id}`
     );
 };
+
+const getUserByUsername = (username) => {
+    return axios
+      .get(`https://be-nc-news-lo1x.onrender.com/api/users/${username}`)
+      .then((response) => {
+        return response.data.user;
+      })
+      .catch((error) => {
+        throw error
+      });
+  }
 
 
 export{
@@ -51,5 +63,6 @@ export{
     getComments,
     voteArticleById,
     postCommentApi,
-    deleteCommentApi
+    deleteCommentApi,
+    getUserByUsername
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router";
 import { postCommentApi } from "../../api";
+import "../CSS/PostComment.css"
 
 export default function PostCommentForm({ setComments, username }) {
   const [isValidForm, setIsValidForm] = useState(true);
@@ -35,7 +36,7 @@ export default function PostCommentForm({ setComments, username }) {
           data.comment,
           ...existingComments,
         ])    
-        window.location.reload();
+        // window.location.reload();
 
       })
       .catch(() => {
@@ -51,7 +52,7 @@ export default function PostCommentForm({ setComments, username }) {
 
   return (
     <form className="comment-form" onSubmit={handleSubmit}>
-      <h3>{isLoading ? "Posting your comment..." : "Add comment"}</h3>
+      <h3>{isLoading ? "Posting your comment..." : "Add Comment"}</h3>
       <textarea
         className="comment-input"
         placeholder="Type here..."
@@ -65,7 +66,7 @@ export default function PostCommentForm({ setComments, username }) {
         className="comment-button"
         disabled={isLoading || !commentInput}
       >
-        {isLoading ? "Posting..." : "Post"}
+        {isLoading ? "Posting..." : "Comment"}
       </button>
       {!isValidForm && (
         <p className="comment-error" id="write-something">
