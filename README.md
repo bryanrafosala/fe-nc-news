@@ -36,6 +36,10 @@ Before development, I created a wireframe and component tree to plan out the str
 
 ![ReactState](./src/Plan/PLAN.png)
 
+![WhatsApp GIF 2024-09-23 at 15 14 34](https://github.com/user-attachments/assets/58d06e6f-94b4-4175-9557-840f944eb92a)
+
+
+
 ---
 
 This portfolio project was completed as part of the Software Engineering Digital Skills Bootcamp provided by [Northcoders](https://northcoders.com/).
