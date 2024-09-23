@@ -36,8 +36,7 @@ Note: This project was built and tested with Node.js v21.6.1.
 
 Before development, I created a wireframe and component tree to plan out the structure of the app. I also identified the API endpoints needed for each component, ensuring efficient state management and data passing via props.
 
-![Home](./src/Plan/Home.png)
-![PageID](./src//Plan/ID-Page.png)
+![NCNEWS](./src/Plan/NCNEWS.png)
 ![ReactState](./src/Plan/PLAN.png)
 
 
